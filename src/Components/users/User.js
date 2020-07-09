@@ -3,6 +3,7 @@ import Spinner from '../layout/Spinner';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Repos from '../repos/Repos';
+import { lightblue, purple } from 'color-name';
 
 export class User extends Component {
   componentDidMount() {
@@ -101,6 +102,15 @@ export class User extends Component {
           <div className='badge badge-light'>Public Repos:{public_repos}</div>
           <div className='badge badge-dark'>Public Gists:{public_gists}</div>
         </div>
+        <h1
+          style={{
+            color: 'purple',
+            font_family: 'verdana',
+            font_size: '300%'
+          }}
+        >
+          Top 5 Repos
+        </h1>
         <Repos repos={repos}></Repos>
       </Fragment>
     );
